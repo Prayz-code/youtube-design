@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="icon" href="image/favicon.ico" type="image">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/35edf05373.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="sticky top-0 z-50 pb-4 md:pb-0 bg-white shadow-sm">
+        <div class="flex item-center justify-between px-4 py-2">
+            <!-- logo and menu -->
+            <div class="flex items-center space-x-4 ">
+                <button class="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <div class="flex item-center">
+                    <i class="fa-brands fa-youtube text-red-600 text-2xl mt-1"></i>
+                    <span class="text-xl font-bold">Youtube</span>
+                </div>  
+            </div>
+            <!-- Search bar -->
+            <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+                <div class="w-full flex">
+                    <input type="text" placeholder="Search"
+                        class="w-full px-4 py-2 border  border-gray-200 rounded-l-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <button class="px-5 py-2 bg-gray-200 border border-gray-300 border-l-0 rounded-r-full">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="ml-4 p-3 bg-gray-300 rounded-full hover:bg-gray-200 cursor-pointer">
+                    <i class="fa fa-microphone"></i>
+                </button>
+            </div>
+
+             <!-- User Action -->
+            <div class="flex items-center space-x-2 mt-2">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-video text-2xl cursor-pointer"></i>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-bell text-2xl cursor-pointer"></i>
+                </button>
+                <button class="w-8 h-8 bg-blue-500 rounded-full text-white font-semibold cursor-pointer">
+                    P
+                </button>
+            </div>
+
+             <!--Search bar On mobiles... -->
+            <div class="flex md:hidden px-4">
+                <div class="w-full flex">
+                    <input type="text" placeholder="Search"
+                        class="w-full px-4 py-2 border border-gray-200 rounded-l-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <button class="px-5 py-2 bg-gray-200 border border-gray-300 border-l-0 rounded-r-full">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="ml-4 p-3 bg-gray-300 rounded-full hover:bg-gray-200 cursor-pointer">
+                    <i class="fa fa-microphone"></i>
+                </button>
+            </div>
+        </div> 
+    </header>
+
+    <!-- Sidebar nav -->
+     <aside class="hidden md:block border-gray-200 fixed top-16 left-0 w-64 min-h-screen bg-white pt-2 overflow-y-auto border-r-4">
+        <nav>
+           <!-- primary navigation -->
+            <div class="px-4 py-2">
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-home text-xl"></i>
+                    <span class="font-semibold">Home</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-fire text-xl"></i>
+                    <span class="font-semibold">Tending</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-compass text-xl"></i>
+                    <span class="font-semibold">Explore</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-play-circle text-xl"></i>
+                    <span class="font-semibold">Subscription</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="font-semibold">You</span>
+                </a>
+            </div>
+
+            <hr class="my-2 text-gray-200">
+            <!-- You Section -->
+            <div class="px-4 py-2">
+                <h3 class="px-3 py-2 font-bold text-xl">You</h3>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-history text-xl"></i>
+                    <span>History</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-brands fa-playstation text-xl"></i>
+                    <span>Playlists</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-clock text-xl"></i>
+                    <span>Watch later</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-thumbs-up text-xl"></i>
+                    <span>Liked videos</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-play text-xl"></i>
+                    <span>Your videos</span>
+                </a>
+            </div>
+
+            <hr class="my-2 text-gray-200">
+
+            <!-- Explore section -->
+            <div class="px-4 py-2">
+                <h3 class="px-3 py-2 font-bold text-xl">Explore</h3>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-music text-xl"></i>
+                    <span>Music</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-brands fa-playstation text-xl"></i>
+                    <span>Gaming</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-newspaper text-xl"></i>
+                    <span>News</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-thumbs-up text-xl"></i>
+                    <span>Sports</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-play text-xl"></i>
+                    <span>Playables</span>
+                </a>
+            </div>
+
+            <hr class="my-2 text-gray-200">
+
+            <div class="px-4 py-2">
+                <h3 class="px-3 py-2 font-bold text-xl">Subscription</h3>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-history text-xl"></i>
+                    <span>Subscription</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-brands fa-playstation text-xl"></i>
+                    <span>Fashion $ Beauty</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-clock text-xl"></i>
+                    <span>Comedy</span>
+                </a>
+                <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-thumbs-up text-xl"></i>
+                    <span>Sports</span>
+                </a>
+                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-play text-xl"></i>
+                    <span>Music</span>
+                </a>
+            </div>
+        </nav>
+     </aside>
+
+     <!-- main content -->
+    <main class="flex-1 p-4 md:ml-64">
+        <!-- category bars -->
+        <div class="flex items-center space-x-3 overflow-x-auto py-2 mb-6">
+            <button class="px-4 py-2 bg-black text-white rounded-full cursor-pointer">
+                All
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Music
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointe text-nowrap">
+                Nigerian gospel music
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Nollywood
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                html
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Css
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Cooking
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Podcast
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer text-nowrap">
+                Contemporary gospel music
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer text-nowrap">
+                Sketch comedy
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Mixes
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Live
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                AI
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer text-nowrap">
+                Web development
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer text-nowrap">
+                Recently uploaded
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer">
+                Watched
+            </button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-100 text-black rounded-full cursor-pointer text-nowrap">
+                New to you
+            </button>
+        </div>
+
+        <!-- Video Display -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5 p-4">
+            <!-- Video Card -->
+            <div class="w-full flex-1 hover:bg-gray-100 transform hover:scale-105 duration-300 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/KkpgBbfx9hY?si=3lKFXSSrU_cXIe8D" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        8:07 pm
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="image/maraji.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Full labour and delivery vlog</h3>
+                            <p class="text-gray-600 text-sm">Maraji's World</p>
+                            <p class="text-gray-600 text-sm">10m views<span class="font-bold"> &middot;</span>2 months ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-pink-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/7C88B6eoDKQ?si=8TFMt6zgxTSn411s" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        2:10 pm
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/1200x/49/45/10/494510ccc2e67b147126d3269093bfc9.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Veekee james vs extra spicy chicken|She spills major tea</h3>
+                            <p class="text-gray-600 text-sm">Ify's Kitchen</p>
+                            <p class="text-gray-600 text-sm">2K views<span class="font-bold"> &middot;</span>5 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-gray-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/z9qD-x_-CNk?si=JnS1Sd3DWr2MZrte" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        1:19:40
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/34/69/8c/34698c45773c1e6f58be8e85035098e0.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Delicious or disaster: season 2| ep 2| shank comics | chef tolu| chef roux</h3>
+                            <p class="text-gray-600 text-sm">Diary of a Kitchen Lover</p>
+                            <p class="text-gray-600 text-sm">85K views<span class="font-bold"> &middot;</span>3 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-zinc-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/g2ViPfi1NqA?si=oNKOucyIDN3Macre" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        12:00 am
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/1200x/5f/fa/8e/5ffa8e99f4a10a9bdff2bc8e778d366a.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">american citizen - brother shaggi| nancy isime|cavemen</h3>
+                            <p class="text-gray-600 text-sm">Brother Shaggi</p>
+                            <p class="text-gray-600 text-sm">10K views<span class="font-bold"> &middot;</span>5 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+        
+        <!-- second row -->
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-5">
+            <!-- Video Card -->
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-emerald-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/aCCr2FARNh4?si=iz51fcdg0EgiFKfb" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        <i class="fa-solid fa-music"></i> 31:33
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/6e/55/cc/6e55ccc4dd410be37aba62e40b24a4fa.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Full labour and delivery vlog</h3>
+                            <p class="text-gray-600 text-sm">Toluwani Odukoya</p>
+                            <p class="text-gray-600 text-sm">115K views<span class="font-bold"> &middot;</span>4 months ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-cyan-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/giKwudHTn8E?si=CwgzLPJXZPjp7tSC" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        8:10
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/1200x/61/0b/2a/610b2aff689094feae2f573aeab4994c.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">edit tutorial | for beginners</h3>
+                            <p class="text-gray-600 text-sm">Pamilerin Ayodeji</p>
+                            <p class="text-gray-600 text-sm">66K views<span class="font-bold"> &middot;</span>3 months ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-gray-50 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/JyC6uS8HwfY?si=_DL5P2GgHL7u05T2" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        25:49
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/1200x/96/35/3e/96353eb83dfb5f32328cdfcdee0127fb.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Delicious or disaster: season 1| episode 1| Reality tv full episode</h3>
+                            <p class="text-gray-600 text-sm">Phyna</p>
+                            <p class="text-gray-600 text-sm">71K views<span class="font-bold"> &middot;</span>2 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-lime-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/Idi8beij1SA?si=MA8Xf4zRZYNe1qmY" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        4:56
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/1200x/93/1f/73/931f73b55e6c03d956dd061401df028c.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 capitalize">breakfast idea for every day - simple, quick and delicious! A brilliant egg toast recipe in 5 minutes</h3>
+                            <p class="text-gray-600 text-sm">Fruhstucksgluck</p>
+                            <p class="text-gray-600 text-sm">1.4m views<span class="font-bold"> &middot;</span>2 weeks ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
+        <!-- third row -->
+         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Video Card -->
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-green-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/OQv5NzsNnrc?si=0Eib_lcb5lXSC2Mq" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        1:39:33
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/76/74/04/76740408d4d5230714682581c8f0d0ff.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">Ajoke - new nigerian movie starring bimbo ademoye, blessing jessics nze</h3>
+                            <p class="text-gray-600 text-sm">Uduak Isong TV</p>
+                            <p class="text-gray-600 text-sm">1M views<span class="font-bold"> &middot;</span>4 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-amber-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/KZzWRq9VNPQ?si=CYirgPPqG8EhRBJB" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        17:10
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/f4/a2/d0/f4a2d0fbd44a9dca8c27fe050d5d67b9.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">on the rise: chaos a la carte (episode 1)</h3>
+                            <p class="text-gray-600 text-sm">Omotomiladeofficial</p>
+                            <p class="text-gray-600 text-sm">4.9K views<span class="font-bold"> &middot;</span>19 hours ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-red-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/PirgbYIPC9M?si=OjuzZt9IfG4CHZFv" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        2:19
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/e7/10/ee/e710ee6a933e56a8d77ee1c0d74b371d.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 uppercase">oversabi aunty |official trailer| episode 1| in cinemas 19th</h3>
+                            <p class="text-gray-600 text-sm">FilmOne NG</p>
+                            <p class="text-gray-600 text-sm">73K views<span class="font-bold"> &middot;</span>4 days ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-blue-100 transform hover:scale-105 duration-300 cursor-pointer">
+                <!-- video -->
+                <div class="relative">
+                    <iframe src="https://www.youtube.com/embed/aJ7-eBhfVT4?si=mK1PnTB8se2SX8mT" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
+                        4:56
+                    </span>
+                </div>
+                <div class="px-3 my-3">
+                    <div class="flex">
+                        <div class="shrink-0 mr-3">
+                            <div>
+                                <img class="rounded-full object-cover size-9" src="https://i.pinimg.com/736x/23/2e/d8/232ed83ab4f65b1c15b3083a00409cf1.jpg" alt="profile-pic">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-sm mb-1 line-clamp-2 capitalize">in just 30 minutes! Chicken thighs in a creamy garlic sauce with mushrooms!</h3>
+                            <p class="text-gray-600 text-sm">Fleish $ Essen</p>
+                            <p class="text-gray-600 text-sm">1.1m views<span class="font-bold"> &middot;</span>6 months ago</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </main>
+    
+        <!-- bottom navigation -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300">
+        <div class="flex justify-around items-center py-3">
+            <a href="#" class="flex-col items-center flex item-center text-red-600">
+                <i class="fab fa-youtube text-xl"></i>
+                <span>Youtube</span>
+            </a>
+            <a href="#" class="flex-col items-center flex item-center text-gray-700">
+                <i class="fas fa-compass text-xl"></i>
+                <span>Explore</span>
+            </a>
+            <a href="#" class="flex-col items-center flex item-center text-gray-700">
+                <i class="fas fa-play-circle text-xl"></i>
+                <span>Subscription</span>
+            </a>
+            <a href="#" class="flex-col items-center flex item-center text-gray-700">
+                <i class="fas fa-bell text-xl"></i>
+                <span>Notifications</span>
+            </a>
+            </a>
+            <a href="#" class="flex-col items-center flex item-center text-gray-700">
+                <i class="fas fa-user text-xl"></i>
+                <span>You</span>
+            </a>'
+        </div>
+    </div>
+</body>
+</html>
+
