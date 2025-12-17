@@ -11,23 +11,23 @@
 </head>
 <body>
     <header class="sticky top-0 z-50 pb-4 md:pb-0 bg-white shadow-sm">
-        <div class="flex item-center justify-between px-4 py-2">
+        <div class="flex items-center justify-between px-4 py-2">
             <!-- logo and menu -->
-            <div class="flex items-center space-x-4 ">
-                <button class="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
-                    <i class="fas fa-bars text-xl"></i>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full hover:bg-gray-100 cursor-pointer sr-only sm:not-sr-only">
+                    <i class="fa-solid fa-bars mt-2 mr-2 text-xl font-bold"></i>
                 </button>
-                <div class="flex item-center">
+                <div class="flex items-center">
                     <i class="fa-brands fa-youtube text-red-600 text-2xl mt-1"></i>
-                    <span class="text-xl font-bold">Youtube</span>
+                    <span class="text-2xl font-bold">Youtube</span>
                 </div>  
             </div>
             <!-- Search bar -->
-            <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+            <div class="flex flex-1 max-w-2xl mx-4 sr-only sm:not-sr-only">
                 <div class="w-full flex">
                     <input type="text" placeholder="Search"
-                        class="w-full px-4 py-2 border  border-gray-200 rounded-l-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
-                    <button class="px-5 py-2 bg-gray-200 border border-gray-300 border-l-0 rounded-r-full">
+                        class="w-full px-4 py-2 border border-gray-200 rounded-l-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <button class="px-5 py-2 bg-gray-200 border border-gray-300 border-l-0 rounded-r-full cursor-pointer">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -37,36 +37,37 @@
             </div>
 
              <!-- User Action -->
-            <div class="flex items-center space-x-2 mt-2">
+            <div class="flex items-center space-x-2 mt-2 sr-only sm:not-sr-only">
                 <button class="p-2 rounded-full hover:bg-gray-100">
                     <i class="fas fa-video text-2xl cursor-pointer"></i>
                 </button>
                 <button class="p-2 rounded-full hover:bg-gray-100">
                     <i class="fas fa-bell text-2xl cursor-pointer"></i>
                 </button>
-                <button class="w-8 h-8 bg-blue-500 rounded-full text-white font-semibold cursor-pointer">
+                <button class="w-8 h-8 bg-blue-500 hover:bg-blue-400 rounded-full text-white font-semibold cursor-pointer">
                     P
                 </button>
             </div>
 
              <!--Search bar On mobiles... -->
-            <div class="flex md:hidden px-4">
-                <div class="w-full flex">
-                    <input type="text" placeholder="Search"
-                        class="w-full px-4 py-2 border border-gray-200 rounded-l-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
-                    <button class="px-5 py-2 bg-gray-200 border border-gray-300 border-l-0 rounded-r-full">
+             <div class="flex md:hidden px-4">
+                <div class="flex">
+                    <button class="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-gray-100">
+                        <i class="fa-regular fa-bell text-2xl cursor-pointer"></i>
+                    </button>
+                    <button class="px-2 py-2 rounded-full hover:bg-gray-100 text-xl cursor-pointer">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <button class="ml-4 p-3 bg-gray-300 rounded-full hover:bg-gray-200 cursor-pointer">
-                    <i class="fa fa-microphone"></i>
-                </button>
             </div>
         </div> 
     </header>
 
     <!-- Sidebar nav -->
-     <aside class="hidden md:block border-gray-200 fixed top-16 left-0 w-64 min-h-screen bg-white pt-2 overflow-y-auto border-r-4">
+     <aside class="hidden md:block border-gray-200 fixed top-16 left-0 w-64 h-screen bg-white pt-2 overflow-y-auto border-r-2 overflow-hidden p-4">
         <nav>
            <!-- primary navigation -->
             <div class="px-4 py-2">
@@ -153,9 +154,9 @@
                     <i class="fas fa-history text-xl"></i>
                     <span>Subscription</span>
                 </a>
-                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
+                 <a href="#" class="flex items-center space-x-5 px-2 py-2 rounded-lg hover:bg-gray-100">
                     <i class="fa-brands fa-playstation text-xl"></i>
-                    <span>Fashion $ Beauty</span>
+                    <span class="text-nowrap">Fashion $ Beauty</span>
                 </a>
                 <a href="#" class="flex items-center space-x-5 px-3 py-2 rounded-lg hover:bg-gray-100">
                     <i class="fas fa-clock text-xl"></i>
@@ -233,13 +234,13 @@
         <!-- Video Display -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5 p-4">
             <!-- Video Card -->
-            <div class="w-full flex-1 hover:bg-gray-100 transform hover:scale-105 duration-300 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+            <div class="w-full flex-1 hover:bg-indigo-100 transform hover:scale-105 duration-300 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer">
                 <!-- video -->
                 <div class="relative">
                     <iframe src="https://www.youtube.com/embed/KkpgBbfx9hY?si=3lKFXSSrU_cXIe8D" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <span
                         class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
-                        8:07 pm
+                        8:07
                     </span>
                 </div>
                 <div class="px-3 my-3">
@@ -264,7 +265,7 @@
                     <iframe src="https://www.youtube.com/embed/7C88B6eoDKQ?si=8TFMt6zgxTSn411s" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <span
                         class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1.5 py-0.5 rounded">
-                        2:10 pm
+                        2:10
                     </span>
                 </div>
                 <div class="px-3 my-3">
@@ -283,7 +284,7 @@
                 </div> 
             </div>
 
-            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-gray-100 transform hover:scale-105 duration-300 cursor-pointer">
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-fuchsia-100 transform hover:scale-105 duration-300 cursor-pointer">
                 <!-- video -->
                 <div class="relative">
                     <iframe src="https://www.youtube.com/embed/z9qD-x_-CNk?si=JnS1Sd3DWr2MZrte" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -308,7 +309,7 @@
                 </div> 
             </div>
 
-            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-zinc-100 transform hover:scale-105 duration-300 cursor-pointer">
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-green-100-100 transform hover:scale-105 duration-300 cursor-pointer">
                 <!-- video -->
                 <div class="relative">
                     <iframe src="https://www.youtube.com/embed/g2ViPfi1NqA?si=oNKOucyIDN3Macre" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -387,7 +388,7 @@
                 </div> 
             </div>
 
-            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-gray-50 transform hover:scale-105 duration-300 cursor-pointer">
+            <div class="rounded-lg w-full flex-1 overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:bg-gray-100 transform hover:scale-105 duration-300 cursor-pointer">
                 <!-- video -->
                 <div class="relative">
                     <iframe src="https://www.youtube.com/embed/JyC6uS8HwfY?si=_DL5P2GgHL7u05T2" width="605" height="200%" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
